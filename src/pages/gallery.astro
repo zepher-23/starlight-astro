@@ -1,6 +1,19 @@
 ---
+import Navbar from '../components/Navbar.astro'
 import '../global.css'
+import VideoCard from '../components/VideoCard.jsx'
+
+const videos = await Astro.glob('../content/video/*.mp4')
 ---
+
+
 <main>
-    <h1>gallery</h1>
+    <Navbar/>
+    <div style="margin-top:100px;display:flex;flex-direction: row;flex-wrap: wrap;padding-right:100px;padding-left:100px;">
+        { videos.map(video=>{
+            
+       return( <VideoCard video = {video} client:only="react" />)
+        })}
+    </div>
+
 </main>

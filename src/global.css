@@ -21,3 +21,10 @@
 body{
     margin:0;
 }
+
+.video{
+    transition: 0.1s;
+}
+.video:hover{
+    transform: scale(1.05);
+}

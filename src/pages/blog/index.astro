@@ -23,7 +23,7 @@ const posts =await Astro.glob('../../posts/*.md')
    <div class="blogCards" style="margin-top: 100px; padding:50px;">
     {posts.map(item=>{
         
-       return <BlogCard data={item.frontmatter}  url={item.frontmatter.tags[0]} />
+       return <BlogCard data={item.frontmatter} url={item.frontmatter.tags[0]} />
         // <div>{item.frontmatter.title}</div>
     })}
    </div>
