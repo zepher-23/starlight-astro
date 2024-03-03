@@ -1,0 +1,48 @@
+---
+import '../global.css'
+
+const {data,url} = Astro.props
+console.log(data)
+const link = "/blog/"+url;
+
+---
+<style>
+    a{
+        text-decoration: none;
+    }
+    .container{
+        border-radius: 10px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+    .container:hover{
+        transform: scale(1.05);
+    }
+    .main{
+        width: 400px;
+        height:200px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px 0px, rgba(98, 98, 71, 0.519) 0px 0px 0px 1px;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+    .main h3{
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    div h6{
+        font-weight: 200;
+        margin:0;
+        margin-right: 10px;
+    }
+</style>
+<main class="container">
+    <a href={link}>
+
+<div class="main" style="color:white">
+    <h3 style="margin:0;font-weight: 300;">{data.title}</h3>
+    <div style="display: flex;flex-direction: row;"> <h6>{data.date}</h6> <h6>{data.author}</h6></div>
+    
+    
+</div></a>
+</main>

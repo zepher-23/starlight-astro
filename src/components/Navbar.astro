@@ -1,0 +1,53 @@
+---
+
+---
+<style>
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100px;
+        background-color: rgba(36, 36, 36, 0.8);
+        padding-right: 100px;
+        padding-left: 100px;
+        max-width: 100vw;
+        color: #feffa8;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
+        z-index: 999;
+        backdrop-filter: blur(5px);
+
+        
+    }
+    .options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 25%;
+        align-items: center;
+
+    }
+    a h3:hover{
+        color:#5395f2;
+        
+    }
+    a h3{
+        color: #feffa8;
+        font-weight: 400;
+        transition: 0.1s;
+    }
+    a{
+        text-decoration: none;
+    }
+
+</style>
+<div style="display:flex;max-width: 100vw;position:fixed;top:0;">
+<main class="navbar">
+    <h1 style="flex-grow: 1;font-weight: 800;
+    font-style: italic;"> STARLIGHT CINEMATICS</h1>
+<div class="options">
+   <a href="/blog"><h3>Blog</h3></a>
+  <a href="/gallery"><h3>Gallery</h3></a>
+   <a href="/contact"><h3>Contact</h3></a>
+</div>
+</main>
+</div>
