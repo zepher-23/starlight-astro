@@ -8,23 +8,38 @@
   font-weight:200;
   font-size:large;
   font-style: normal;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
+
+@media only screen and (max-width:1000px){
 body{
-    margin:0;
+    font-size: larger;
 }
+
 
 .video{
     transition: 0.1s;
 }
 .video:hover{
     transform: scale(1.05);
+}
+}
+
+@media only screen and (min-width:1000px){
+    body{
+        margin:0;
+    }
+    
+    .video{
+        transition: 0.1s;
+    }
+    .video:hover{
+        transform: scale(1.05);
+    }
 }

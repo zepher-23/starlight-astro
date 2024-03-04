@@ -2,12 +2,12 @@
 
 ---
 <style>
-    @media  (max-width:1000px){
+    @media only screen and (max-width:1000px){
         .navbar{
         display: flex;
         flex-direction: row;
         width: 100vw;
-        height: 90px;
+        height: 150px;
         background-color: rgba(36, 36, 36, 0.8);
         padding-right: 100px;
         padding-left: 100px;
@@ -23,6 +23,7 @@
         display: flex;
         text-align: center;
         justify-content: center;
+        font-size: 50px;
     }
     .mobileOptions{
         display: flex;
@@ -31,8 +32,13 @@
         flex-direction: row;
         justify-content: space-around;
         width: 100vw;
-        background-color:rgba(36, 36, 36, 0.8) ;
-        backdrop-filter: blur(5px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 40px;
+        background-color:rgba(36, 36, 36, 1);
+        /* backdrop-filter: blur(5px); */
+        box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 4px;
+
         align-items: center;
 
     }
@@ -46,6 +52,7 @@
     a h2{
         color: #feffa8;
         font-weight: 400;
+        font-size: larger;
         transition: 0.1s;
     }
     a{
@@ -54,7 +61,7 @@
 
     }
 
-    @media (min-width:1000px ) {
+    @media only screen and (min-width:1000px ) {
         .navbar{
         display: flex;
         flex-direction: row;
@@ -103,11 +110,13 @@
 <main class="navbar">
     <h2 style="flex-grow: 1;font-weight: 800;
     font-style: italic;align-items: center;display:flex"> STARLIGHT CINEMATICS</h2>
+
 <div class="options">
    <a href="/blog"><h4>Blog</h4></a>
   <a href="/gallery"><h4>Gallery</h4></a>
    <a href="/contact"><h4>Contact</h4></a>
 </div>
+
 </main>
 <div class="mobileOptions">
     <a href="/blog"><h2>Blog</h2></a>
