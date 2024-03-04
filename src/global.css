@@ -30,8 +30,9 @@ body{
     font-size: 30px;
 }
 button{
-    font-size: 30px;
-    width: 150px;
+    margin-left:10px;
+    font-size: 40px;
+    width: 40%;
 }
 
 
