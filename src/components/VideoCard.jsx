@@ -8,19 +8,20 @@ const VideoCard = (props) => {
 
 const playVideo =()=>{
     videoRef.current.play()
+    // videoRef.current.controls = true
 
 }
 const pauseVideo =()=>{
     videoRef.current.pause();
     videoRef.current.currentTime = 0;
+    // videoRef.current.controls = false
 }
   return (
 <>
-<div >
-<video className="video" width="400px" height="300px" ref={videoRef} onMouseOver={playVideo} onMouseLeave={pauseVideo}>
+
+<video className="video" width="30%"  ref={videoRef} onMouseOver={playVideo} onMouseLeave={pauseVideo}>
         <source src={video.default} />
         </video>
-</div>
 
 </>
   );

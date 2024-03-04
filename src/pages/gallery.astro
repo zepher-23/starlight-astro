@@ -9,7 +9,7 @@ const videos = await Astro.glob('../content/video/*.mp4')
 
 <main>
     <Navbar/>
-    <div style="margin-top:100px;display:flex;flex-direction: row;flex-wrap: wrap;padding-right:100px;padding-left:100px;">
+    <div style="margin-top:150px;display:flex;flex-direction: row;flex-wrap: wrap;padding-right:100px;padding-left:100px;justify-content: center;">
         { videos.map(video=>{
             
        return( <VideoCard video = {video} client:only="react" />)

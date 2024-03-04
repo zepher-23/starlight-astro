@@ -2,6 +2,7 @@
 import '../../global.css'
 import BlogCard from '../../components/BlogCard.astro'
 import Navbar from '../../components/Navbar.astro'
+import SearchBar from '../../components/SearchBar.jsx'
 
 const posts =await Astro.glob('../../posts/*.md')
 
@@ -20,7 +21,9 @@ const posts =await Astro.glob('../../posts/*.md')
 </style>
 <main >
     <Navbar/>
-   <div class="blogCards" style="margin-top: 100px; padding:50px;">
+    <div style="margin-top: 100px; width:100%;display:flex;justify-content: center;" ><SearchBar /></div>
+   <div class="blogCards" style=" padding:20px;">
+    
     {posts.map(item=>{
         
        return <BlogCard data={item.frontmatter} url={item.frontmatter.tags[0]} />
