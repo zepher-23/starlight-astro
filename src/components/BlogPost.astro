@@ -1,14 +1,28 @@
 ---
 
 // import '../../global.css'
-const {post,title} = Astro.props
+const {post} = Astro.props
 const Data = post.Content
 
 ---
+<style>
+    div h5{
+        margin:0px;
+        font-weight: 300;
+        margin-right:10px;
+        color: #feffa8;
+    }
 
+</style>
 <main>
+
+    <div class="date" style="display: flex; justify-content: start;margin:0;">
+        <h5>{post.frontmatter.date} |</h5>
+        <h5> {post.frontmatter.author}</h5>
+    </div>
     
     <div>
+
 
         <Data />
     </div>
