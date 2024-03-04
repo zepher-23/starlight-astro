@@ -23,8 +23,10 @@ const posts =await Astro.glob('../../posts/*.md')
     }
     .searchBar{
         margin-top: 150px;
-        
-         width:100vw;
+        align-self: center;
+         width:80%;
+         
+         
          display:flex;
          justify-content: center;
     }
@@ -41,16 +43,18 @@ const posts =await Astro.glob('../../posts/*.md')
     }
     .searchBar{
         margin-top: 100px;
-         width:100%;
+         width:50%;
          display:flex;
+         align-self: center;
          justify-content: center;
     }
     }
     
 </style>
-<main >
+<main  >
     <Navbar/>
-    <div class="searchBar" ><SearchBar /></div>
+    <div style="display: flex;justify-content:center;width:100vw;">
+    <div class="searchBar" ><SearchBar /></div></div>
    <div class="blogCards">
     
     {posts.map(item=>{
