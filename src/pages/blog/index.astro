@@ -53,9 +53,9 @@ const posts =await Astro.glob('../../posts/*.md')
     
 </style>
 <main  >
-    <Navbar/>
-    <div style="display: flex;justify-content:center;width:100vw;">
-    <div class="searchBar" ><SearchBar /></div></div>
+    <Navbar data ={posts}/>
+    <div style="display: flex;justify-content:center;">
+    <div class="searchBar" ><SearchBar data ={posts} client:only="react" /></div></div>
    <div class="blogCards">
     
     {posts.map(item=>{
