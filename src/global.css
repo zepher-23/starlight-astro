@@ -28,11 +28,18 @@ body{
     width: 100%;
     height:80px;
     font-size: 30px;
+    border-radius: 20px;
+}
+.search::placeholder{
+    padding-left: 20px;
 }
 button{
     margin-left:10px;
     font-size: 40px;
     width: 40%;
+    border-radius: 20px;
+
+    background-color:#5395f2 ;
 }
 
 
@@ -51,9 +58,18 @@ button{
     .search{
         width: 100%;
         height:40px;
+        border-radius: 10px;
+    }
+    .search::placeholder{
+        padding-left: 10px;
     }
     button{
-        width:100px;
+        width:150px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-left: 10px;
+        background-color:#5395f2 ;
+
     }
     
     .video{
