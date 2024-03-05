@@ -19,7 +19,7 @@ const pauseVideo =()=>{
   return (
 <>
 
-<video className="video" width="30%"  ref={videoRef} onMouseOver={playVideo} onMouseLeave={pauseVideo}>
+<video className="video" width="30%"   ref={videoRef} onMouseOver={playVideo} onMouseLeave={pauseVideo}>
         <source src={video.default} />
         </video>
 

@@ -5,11 +5,35 @@ import VideoCard from '../components/VideoCard.jsx'
 
 const videos = await Astro.glob('../content/video/*.mp4')
 ---
+<style>
+    @media only screen and (min-width:1000px){
+    .videoContainer{
+        margin-top:150px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right:100px;
+        padding-left:100px;
+        justify-content: center;
+    }
+}
 
+@media only screen and (max-width:1000px){
+    .videoContainer{
+        margin-top:200px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right:50px;
+        padding-left:50px;
+        justify-content: center;
+    }
+}
+</style>
 
 <main>
     <Navbar/>
-    <div style="margin-top:150px;display:flex;flex-direction: row;flex-wrap: wrap;padding-right:100px;padding-left:100px;justify-content: center;">
+    <div class="videoContainer" >
         { videos.map(video=>{
             
        return( <VideoCard video = {video} client:only="react" />)
