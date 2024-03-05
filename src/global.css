@@ -6,7 +6,7 @@
   /* font-optical-sizing: auto; */
   line-height: 1.5;
   font-weight:200;
-  font-size:large;
+  font-size:medium;
   font-style: normal;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -22,6 +22,7 @@ body{
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
+    user-select: none;
 }
 
 .search{

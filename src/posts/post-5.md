@@ -2,9 +2,7 @@
 title: "Exploring the Wonders of Nature"
 date: "2024-02-27"
 author: "John Doe"
-categories:
-  - Nature
-  - Travel
+categories:  ['popular',"latest"]
 tags:
   [ page5]
 ---

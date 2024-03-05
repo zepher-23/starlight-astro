@@ -12,11 +12,8 @@ const posts =await Astro.glob('../../posts/*.md')
 <style>
     @media only screen and (max-width: 1000px) {
         .blogCards{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-       padding: 50px;
-       gap: 50px;
+            
+        padding: 50px;
        margin-bottom: 150px;
         justify-content: center;
        
@@ -31,11 +28,20 @@ const posts =await Astro.glob('../../posts/*.md')
          display:flex;
          justify-content: center;
     }
+    .cardSection{
+       
+        padding: 0px;
+    }
+    h3{
+        text-align: center;
+    }
     }
     @media only screen and (min-width: 1000px) {
+        
         .blogCards{
         display: flex;
-        flex-direction: row;
+        
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 20px;
         padding: 20px;
@@ -49,6 +55,18 @@ const posts =await Astro.glob('../../posts/*.md')
          align-self: center;
          justify-content: center;
     }
+    .cardSection{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:20px;
+    }
+    h3{
+        text-align: center;
+        margin:0;
+        font-weight: 300;
+    }
     }
     
 </style>
@@ -56,12 +74,37 @@ const posts =await Astro.glob('../../posts/*.md')
     <Navbar data ={posts}/>
     <div style="display: flex;justify-content:center;">
     <div class="searchBar" ><SearchBar data ={posts} client:only="react" /></div></div>
+
+
    <div class="blogCards">
-    
-    {posts.map(item=>{
+    <h3>Latest</h3>
+    <div class="latest cardSection">
+        {posts.map(item=>{
+        
+            return <BlogCard data={item.frontmatter} url={item.frontmatter.tags[0]} />
+             // <div>{item.frontmatter.title}</div>
+         })}
+
+    </div>
+    <h3>Popular</h3>
+    <div class="popular cardSection">
+        {posts.map(item=>{
+        
+            return <BlogCard data={item.frontmatter} url={item.frontmatter.tags[0]} />
+             // <div>{item.frontmatter.title}</div>
+         })}
+
+    </div>
+
+    <h3>All</h3>
+    <div class="all cardSection">
+        {posts.map(item=>{
         
        return <BlogCard data={item.frontmatter} url={item.frontmatter.tags[0]} />
         // <div>{item.frontmatter.title}</div>
     })}
+    </div>
+    
+    
    </div>
 </main>

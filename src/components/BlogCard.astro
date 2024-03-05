@@ -14,13 +14,14 @@ const link = "/blog/"+url;
         border-radius: 10px;
         transition: 0.1s;
         cursor: pointer;
+       
     }
     .container:hover{
         transform: scale(1.05);
     }
     .main{
-        max-width: 400px;
-        box-shadow: rgba(90, 93, 50, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+        max-width: 300px;
+        box-shadow:  rgba(31, 29, 29, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
         padding: 20px;
         border-radius: 10px;
         
@@ -30,14 +31,26 @@ const link = "/blog/"+url;
         box-shadow: rgba(50, 84, 93, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
     }
     .main h3{
-        overflow: hidden;
-        text-overflow: ellipsis;
+        display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
     }
     div h5{
         font-weight: 200;
         margin:0;
         margin-right: 10px;
         color: #feffa8;
+    }
+    p{
+        display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        margin: 0;
+        margin-top:10px;
     }
     }
 
@@ -54,9 +67,10 @@ const link = "/blog/"+url;
         transform: scale(1.05);
     }
     .main{
-        
+       
         box-shadow:rgba(0, 0, 0, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
         padding: 20px;
+        margin-bottom: 30px;
 
         border-radius: 10px;
         
@@ -64,14 +78,26 @@ const link = "/blog/"+url;
     }
     
     .main h3{
-        overflow: hidden;
-        text-overflow: ellipsis;
+        display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
     }
     div h5{
         font-weight: 200;
         margin:0;
         margin-right: 10px;
         color:#feffa8;
+    }
+    p{
+        display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            margin:0;
+            margin-top: 10px;
     }
     }
     
@@ -80,9 +106,9 @@ const link = "/blog/"+url;
     <a href={link}>
 
 <div class="main" style="color:white">
-    <h3 style="margin:0;font-weight: 400;">{data.title}</h3>
+    <h3 style="margin:0;font-weight: 400;">{data.title} </h3>
     <div style="display: flex;flex-direction: row;"> <h5> {data.date} | </h5> <h5> {data.author}</h5></div>
-<p>this is a description of the above title, feel free to click on it and read. Thank you!</p>
+<p>this is a description of the above title, feel free to click on it and read. Thank you!.kjsabjkkkkkkkkkkkkkkkkasdsaaaaaaaaaaaaakkkkkkkkkkkkk</p>
     
     
 </div></a>
