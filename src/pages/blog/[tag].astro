@@ -13,14 +13,14 @@ export async function getStaticPaths() {
     const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
     return {
       params: { tag },
-      props: { posts: filteredPosts },
+      props: { posts: filteredPosts,allPosts },
     };
   });
 } 
 
 
 const { tag } = Astro.params;
-const {posts} = Astro.props
+const {posts,allPosts} = Astro.props
 
 
 
@@ -28,14 +28,57 @@ const {posts} = Astro.props
 <style>
     @media only screen and (min-width: 1000px) {
         .blogPage{
-        width:60%;
+        width:70%;
+        max-height: 100%;
+        overflow-y: scroll;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         text-align: justify;
-        padding:50px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 1px;
+        padding:20px;
+        padding-right:10px;
+        margin-left: 4%;
+        margin-top:100px;
+        margin-bottom: 20px;
+        /* box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 1px; */
+    }
+    .blogPage::-webkit-scrollbar{
+        width:0;
+    }
+    .sidePanelContainer{display: flex;
+        flex-direction: column;
+        /* background-color: #feffa8; */
+        height:100%;
+        padding:20px;
+        
+
+    }
+    .sidePanel{
+        display: flex;
+        flex-direction: column;
+        width:30%;
+        height:500px;
+        margin-top:50px;
+        margin-right:4%;
+        padding:20px;
+        padding-left:10px;
+    }
+    .link{
+        color:#5395f2;text-decoration: none;
+        display: flex;
+
+    }
+    .link h5{
+        color:white;
+    }
+    .link:hover{
+        color:white;
+    }
+    .blogPageMain{
+        display: flex;
+        justify-content: start;
+        height:100vh;
     }
     }
 @media only screen and (max-width: 1000px){
@@ -47,7 +90,17 @@ const {posts} = Astro.props
         align-items: center;
         /* text-align:justify; */
         padding:50px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 1px;
+        margin-top:100px;
+        margin-bottom: 100px;
+        /* box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 1px; */
+    }
+    .sidePanel{
+        display: none;
+    }
+    .blogPageMain{
+        display: flex;
+        justify-content: start;
+        height:100%;
     }
 }
    
@@ -57,10 +110,25 @@ const {posts} = Astro.props
 </head>
 <main >
 <Navbar />
-<div style="display: flex;justify-content: center;">
-<div class="blogPage" style="margin-top:100px;margin-bottom: 100px;" >
+<div class="blogPageMain" >
+<div class="blogPage" >
         {posts.map((post) => <BlogPost post={post} />)}
     </div>
-</div>
-<Footer/>
+    <div class="sidePanel">
+        <div class="sidePanelContainer">
+            <h2>Links</h2>
+
+
+            {allPosts.map((post,index)=>{
+                return <div style="display: flex;flex-direction: row;align-items: center;">
+                           
+                            <a class="link" href={"/blog/"+ post.frontmatter.tags[0]} style={posts[0].frontmatter.tags[0]===post.frontmatter.tags[0]?"color:#feffa8;":""} > <h5 style="margin:0;margin-right: 5px;">{posts[0].frontmatter.tags[0]===post.frontmatter.tags[0]?">":"-"} </h5>{post.frontmatter.title}</a>
+                        </div>
+            })}
+
+        </div>
+
+    </div>
+    </div>
+    <!-- <Footer/> -->
 </main>

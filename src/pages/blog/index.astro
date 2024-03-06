@@ -50,7 +50,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
         flex-direction: column;
         flex-wrap: wrap;
         gap: 20px;
-        padding: 20px;
+        /* padding: 20px; */
         justify-content: center;
         
     }
@@ -67,18 +67,21 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
         flex-wrap: wrap;
         justify-content: center;
         gap:20px;
+        padding: 20px;
         margin-bottom: 50px;
     }
-    h3{
+    h2{
         text-align: center;
         margin:0;
         padding: 5px;
-        font-weight: 500;
-        border-radius: 10px;
-        margin-left: 50px;
-        margin-right: 50px;
+        font-weight: 800;
+
+        /* border-radius: 10px; */
+        /* margin-left: 50px;
+        margin-right: 50px; */
+        
         background-color: #feffa8;
-        color: black;
+        color: rgba(36, 36, 36,1);
     }
     }
     
@@ -90,7 +93,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
 
 
    <div class="blogCards">
-    <h3>Latest</h3>
+    <h2>Latest Posts</h2>
     <div class="latest cardSection">
         {posts.map(item=>{
         
@@ -99,7 +102,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
          })}
 
     </div>
-    <h3>Popular</h3>
+    <h2>Popular Posts</h2>
     <div class="popular cardSection">
         {posts.map(item=>{
         
@@ -109,7 +112,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
 
     </div>
 
-    <h3>All</h3>
+    <h2>All Posts</h2>
     <div class="all cardSection">
         {posts.map(item=>{
         
