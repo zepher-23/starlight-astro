@@ -24,9 +24,7 @@ body{
     margin-bottom: 50px;
     user-select: none;
 }
-p{
-    font-size: 20px;
-   }
+
 .search{
     width: 100%;
     height:80px;
@@ -66,6 +64,10 @@ button{
         height:40px;
         padding-left: 10px;
         border-radius: 10px;
+    }
+
+    .blogPage p{
+        text-align:justify ;
     }
    
    p{
