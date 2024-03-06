@@ -9,15 +9,14 @@ tags:
    ]   
 
 ---
-
-import {Image} from 'astro:assets'
+import ImageComp from '../../components/ImageComp.astro'
 import banner from './banner.jpg'
+export const imageUrl = banner
 
 # Exploring the Wonders of Nature
 
+<ImageComp url={banner} />
 
-<Image src={banner} style="width:100%;height:auto;"  alt="Banner"/>
-{/* <img src={banner.src} width='100%' alt='text' /> */}
 
 Nature has always fascinated explorers and adventurers with its breath taking landscapes and diverse ecosystems. From towering mountains to lush forests and pristine beaches, there's no shortage of wonders to discover.
 

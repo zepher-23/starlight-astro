@@ -2,6 +2,7 @@
 import BlogPost from '../../components/BlogPost.astro';
 import '../../global.css';
 import Navbar from '../../components/Navbar.astro'
+import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
 
@@ -61,4 +62,5 @@ const {posts} = Astro.props
         {posts.map((post) => <BlogPost post={post} />)}
     </div>
 </div>
+<Footer/>
 </main>

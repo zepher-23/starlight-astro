@@ -1,9 +1,10 @@
 ---
 import '../global.css'
 
-const {data,url} = Astro.props
+const {data,url,banner} = Astro.props
 const link = "/blog/"+url;
 
+import ImageComp from './ImageComp.astro'
 ---
 <style>
     @media only screen and (min-width:1000px){
@@ -51,6 +52,10 @@ const link = "/blog/"+url;
             text-overflow: ellipsis;
         margin: 0;
         margin-top:10px;
+    }
+    .imageContainer{
+        margin-bottom: 10px;
+        height:70px;
     }
     }
 
@@ -100,6 +105,10 @@ const link = "/blog/"+url;
             margin:0;
             margin-top: 10px;
     }
+    .imageContainer{
+        margin-bottom: 20px;
+        height:150px;
+    }
     }
     
 </style>
@@ -107,6 +116,8 @@ const link = "/blog/"+url;
     <a href={link}>
 
 <div class="main" style="color:white">
+    <div class="imageContainer" style="width:100%;overflow:hidden;"><ImageComp url={banner} width="100%" height="auto" style="margin-top: -20%;" alt=""/></div>
+    
     <h3 style="margin:0;font-weight: 400;">{data.title} </h3>
     <div style="display: flex;flex-direction: row;"> <h5> {data.date} | </h5> <h5> {data.author}</h5></div>
 <p>this is a description of the above title, feel free to click on it and read. Thank you!.kjsabjkkkkkkkkkkkkkkkkasdsaaaaaaaaaaaaakkkkkkkkkkkkk</p>
