@@ -4,7 +4,8 @@ import BlogCard from '../../components/BlogCard.astro'
 import Navbar from '../../components/Navbar.astro'
 import SearchBar from '../../components/SearchBar.jsx'
 
-const posts =await Astro.glob('../../posts/*.md')
+const posts =await Astro.glob('../../posts/*/*.mdx')
+console.log(posts[0])
 
 
 ---
@@ -91,7 +92,7 @@ const posts =await Astro.glob('../../posts/*.md')
     <div class="latest cardSection">
         {posts.map(item=>{
         
-            return <BlogCard data={item.frontmatter} url={item.frontmatter.tags[0]} />
+            return <BlogCard data={item.frontmatter} banner={item.banner} url={item.frontmatter.tags[0]} />
              // <div>{item.frontmatter.title}</div>
          })}
 
