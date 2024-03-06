@@ -24,6 +24,10 @@ body{
     margin-bottom: 50px;
     user-select: none;
 }
+.blogPage p{
+    font-size: 40px;
+
+}
 
 .search{
     width: 100%;
