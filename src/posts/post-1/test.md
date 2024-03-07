@@ -1,44 +1,3 @@
----
-title: "Exploring the Wonders of Nature"
-date: "2024-02-27"
-author: "John Doe"
-
-categories: [popular,"latest"]
-tags:
-  [ page1
-   ]   
-
----
-import ImageComp from '../../components/ImageComp.astro'
-import banner from './banner.jpg'
-export const imageUrl = banner
-
-
-
-# Exploring the Wonders of Nature
-
-<ImageComp url={banner} />
-
-
-Nature has always fascinated explorers and adventurers with its breath taking landscapes and diverse ecosystems. From towering mountains to lush forests and pristine beaches, there's no shortage of wonders to discover.
-
-<div class="toc">
-<h4 style="margin:0;margin-bottom:10px;">Table of Contents</h4>
-
-{/* <!-- TOC tocDepth:2..3 chapterDepth:2..6 --> */}
-
-- [1. Hiking in the Mountains](#1-hiking-in-the-mountains)
-- [2. Diving into the Depths](#2-diving-into-the-depths)
-- [3. Camping under the Stars](#3-camping-under-the-stars)
-  - [3.1. Conclusion](#31-conclusion)
-
-{/* <!-- /TOC --> */}
-
-</div>
-
-
-
-
 ## 1. Hiking in the Mountains
 
 One of the most exhilarating ways to experience nature is
@@ -55,4 +14,9 @@ There's something magical about spending a night under the stars, far away from 
 ### 3.1. Conclusion
 
 Exploring the wonders of nature is an enriching experience that nourishes the soul and leaves a lasting impression. Whether you're hiking in the mountains, diving into the depths of the ocean, or camping under the stars, nature never fails to inspire awe and wonder.
+
+1. [1. Hiking in the Mountains](#1-hiking-in-the-mountains)
+2. [2. Diving into the Depths](#2-diving-into-the-depths)
+3. [3. Camping under the Stars](#3-camping-under-the-stars)
+   1. [3.1. Conclusion](#31-conclusion)
 
