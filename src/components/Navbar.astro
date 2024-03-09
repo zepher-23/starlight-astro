@@ -1,5 +1,5 @@
 ---
-
+import ViewTransitions from "astro/components/ViewTransitions.astro"
 ---
 <style>
     @media only screen and (max-width:1000px){
@@ -124,7 +124,10 @@
     }
     
 </style>
-<div style="display:flex;max-width: 100vw;position:fixed;top:0;z-index: 999;">
+<head>
+    <!-- <ViewTransitions/> -->
+</head>
+<div style="display:flex;max-width: 100vw;position:fixed;top:0;z-index: 999;" >
 <main class="navbar">
    <h2 style="flex-grow: 1;font-weight: 800;
     font-style: italic;align-items: center;display:flex"><a href="/">STARLIGHT CINEMATICS</a> </h2>

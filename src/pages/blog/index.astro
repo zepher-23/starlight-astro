@@ -4,6 +4,7 @@ import BlogCard from '../../components/BlogCard.astro'
 import Navbar from '../../components/Navbar.astro'
 import SearchBar from '../../components/SearchBar.jsx'
 import Footer from '../../components/Footer.astro'
+import { ViewTransitions } from 'astro:transitions'
 
 const posts =await Astro.glob('../../posts/*/*.mdx')
 
@@ -89,10 +90,13 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
     }
     
 </style>
+<head>
+    <ViewTransitions/>
+</head>
 <main  >
     <Navbar data ={posts}/>
-    <div style="display: flex;justify-content:center;">
-    <div class="searchBar" ><SearchBar data ={posts} client:only="react" /></div></div>
+    <div style="display: flex;justify-content:center;"  transition:animate="fade" >
+    <div class="searchBar" ><SearchBar data ={posts} client:only="react" transition:animate="fade"/></div></div>
 
 
    <div class="blogCards">

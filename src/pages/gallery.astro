@@ -2,8 +2,10 @@
 import Navbar from '../components/Navbar.astro'
 import '../global.css'
 import VideoCard from '../components/VideoCard.jsx'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 
 const videos = await Astro.glob('../content/video/*.mp4')
+
 ---
 <style>
     @media only screen and (min-width:1000px){
@@ -30,14 +32,19 @@ const videos = await Astro.glob('../content/video/*.mp4')
     }
 }
 </style>
-
+<head>
+    <ViewTransitions/>
+</head>
 <main>
     <Navbar/>
-    <div class="videoContainer" >
-        { videos.map(video=>{
+    <div class="videoContainer" transition:animate="fade">
+        <!-- { videos.map(video=>{
             
        return( <VideoCard video = {video} client:only="react" />)
-        })}
+        })} --> 
+           <iframe transition:animate="fade" width="100%" height="100%" src="https://www.youtube.com/embed/ZxbiiZE2ICw" title="Best of Ben Bohmer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
     </div>
+
 
 </main>
