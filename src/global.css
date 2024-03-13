@@ -102,6 +102,37 @@ button{
 .toc a:hover{
     color:#feffa8;
 }
+
+.mainForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:80vw;
+}
+.notification{
+    display: flex;
+    justify-content: center;
+    width:80vw;
+}
+input{
+    display: flex;
+    align-items: center;
+    height:50px;
+    font-size: 30px;
+    padding:10px;
+}
+input::placeholder{
+    padding:10px;
+    font-size: 30px;
+}
+textarea::placeholder{
+    padding:10px;
+    font-size: 30px;
+}
+textarea{
+    font-size: 30px;
+    padding:10px;
+}
 }
 
 @media only screen and (min-width:1000px){
@@ -128,6 +159,40 @@ button{
    p{
     font-size: 16px;
    }
+
+   .form{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    
+   }
+   .mainForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:30vw;
+}
+.notification{
+    display: flex;
+    justify-content: center;
+    width:40vw;
+}
+input{
+    display: flex;
+    align-items: center;
+    height:20px;
+    
+    padding:10px;
+}
+input::placeholder{
+    padding:10px;
+}
+textarea::placeholder{
+    padding:10px;
+}
+textarea{
+    padding:10px;
+}
     button{
         width:150px;
         font-size: 20px;

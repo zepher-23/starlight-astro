@@ -19,7 +19,17 @@
     "astro-robots": "^2.0.0",
     "astro-robots-txt": "^1.0.0",
     "contentful": "^10.6.22",
+    "iconify-icon": "^2.0.0",
+    "netlify": "^13.1.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/material-symbols-light": "^1.1.14",
+    "@iconify-json/mdi": "^1.1.64",
+    "@iconify/json": "^2.2.190",
+    "@iconify/utils": "^2.1.22",
+    "astro-icon": "^1.1.0"
   }
 }
