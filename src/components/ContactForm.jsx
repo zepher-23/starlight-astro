@@ -16,7 +16,6 @@ const handleChange=(e)=>{
 
 
 
-
 const hideMessage = () => {
     setTimeout(() => {
       setNotData(prevState => ({ ...prevState, flag: false }));
@@ -32,7 +31,7 @@ const hideMessage = () => {
             return
         }
         
-   fetch("./.netlify/functions/sendMail", {
+   fetch(`${import.meta.env.SITE}/.netlify/functions/sendMail`, {
             method: "POST",
             body: JSON.stringify({
               name: data.name,

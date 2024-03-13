@@ -142,6 +142,8 @@ textarea{
     .search{
         width: 100%;
         height:40px;
+        padding:0;
+        border:none;
         padding-left: 10px;
         border-radius: 10px;
     }
@@ -175,7 +177,7 @@ textarea{
 .notification{
     display: flex;
     justify-content: center;
-    width:40vw;
+    width:30vw;
 }
 input{
     display: flex;
@@ -197,8 +199,14 @@ textarea{
         width:150px;
         font-size: 20px;
         border-radius: 10px;
+        border:none;
         margin-left: 10px;
         background-color:#5395f2 ;
+
+    }
+    button:active{
+        background-color:#5395f2d2 ;
+
 
     }
     
