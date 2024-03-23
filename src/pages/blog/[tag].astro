@@ -68,18 +68,19 @@ const {posts,allPosts} = Astro.props
         padding-left:10px;
     }
     .link{
-        color:#5395f2;
+        color:#0C359E;
         text-decoration: none;
         display: flex;
         padding-bottom:5px;
+        font-weight: 400;
         
 
     }
     .link h5{
-        color:white;
+        color:#222831;
     }
     .link:hover{
-        color:white;
+        color:#76ABAE;
     }
     .blogPageMain{
         display: flex;
@@ -136,7 +137,7 @@ const {posts,allPosts} = Astro.props
             {allPosts.map((post,index)=>{
                 return <div style="display: flex;flex-direction: row;align-items: center;">
                            
-                            <a class="link" href={"/blog/"+ post.frontmatter.tags[0]} style={posts[0].frontmatter.tags[0]===post.frontmatter.tags[0]?"color:#feffa8;":""} > <h5 style="margin:0;margin-right: 5px;">{posts[0].frontmatter.tags[0]===post.frontmatter.tags[0]?">":"-"} </h5>{post.frontmatter.title}</a>
+                            <a class="link" href={"/blog/"+ post.frontmatter.tags[0]} style={posts[0].frontmatter.tags[0]===post.frontmatter.tags[0]?"color:#76ABAE;":""} > <h5 style="margin:0;margin-right: 5px;">{posts[0].frontmatter.tags[0]===post.frontmatter.tags[0]?">":"-"} </h5>{post.frontmatter.title}</a>
                         </div>
             })}
 

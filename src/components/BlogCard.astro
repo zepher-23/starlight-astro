@@ -15,6 +15,7 @@ import ImageComp from './ImageComp.astro'
         border-radius: 10px;
         transition: 0.1s;
         cursor: pointer;
+        background-color: #EEEEEE;
        
     }
     .container:hover{
@@ -22,14 +23,14 @@ import ImageComp from './ImageComp.astro'
     }
     .main{
         max-width: 300px;
-        box-shadow:  rgba(31, 29, 29, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
-        padding: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                        padding: 20px;
         border-radius: 10px;
         
 
     }
     .main:hover{
-        box-shadow: rgba(50, 84, 93, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+        box-shadow: rgba(36, 37, 37, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
     }
     .main h3{
         display: -webkit-box;
@@ -39,10 +40,10 @@ import ImageComp from './ImageComp.astro'
             text-overflow: ellipsis;
     }
     div h5{
-        font-weight: 200;
+        font-weight: 300;
         margin:0;
         margin-right: 10px;
-        color: #feffa8;
+        color: #76ABAE;
     }
     p{
         display: -webkit-box;
@@ -67,14 +68,15 @@ import ImageComp from './ImageComp.astro'
         border-radius: 10px;
         transition: 0.1s;
         cursor: pointer;
+        background-color: #EEEEEE;
     }
     .container:hover{
         transform: scale(1.05);
     }
     .main{
        
-        box-shadow:rgba(0, 0, 0, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
-        padding: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                        padding: 20px;
         margin-bottom: 30px;
 
         border-radius: 10px;
@@ -90,10 +92,10 @@ import ImageComp from './ImageComp.astro'
             text-overflow: ellipsis;
     }
     div h5{
-        font-weight: 200;
+        font-weight: 300;
         margin:0;
         margin-right: 10px;
-        color:#feffa8;
+        color:#76ABAE;
     }
     p{
         display: -webkit-box;
@@ -115,10 +117,10 @@ import ImageComp from './ImageComp.astro'
 <main class="container">
     <a href={link}>
 
-<div class="main" style="color:white">
+<div class="main" style="color:#222831">
     <div class="imageContainer" style="width:100%;overflow:hidden;"><ImageComp url={banner} width="100%" height="auto" style="margin-top: -20%;" alt=""/></div>
     
-    <h3 style="margin:0;font-weight: 400;">{data.title} </h3>
+    <h3 style="margin:0;font-weight: 700;">{data.title} </h3>
     <div style="display: flex;flex-direction: row;"> <h5> {data.date} | </h5> <h5> {data.author}</h5></div>
 <p>this is a description of the above title, feel free to click on it and read. Thank you!.kjsabjkkkkkkkkkkkkkkkkasdsaaaaaaaaaaaaakkkkkkkkkkkkk</p>
     

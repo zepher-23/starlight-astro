@@ -41,7 +41,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
         /* border-radius: 10px; */
         /* background-color: #feffa8; */
         /* color: black; */
-        color: #fff;
+        color: #242424;
         padding: 5px;
     }
     }
@@ -64,6 +64,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
          align-self: center;
          justify-content: center;
     }
+    
     .cardSection{
         display: flex;
         flex-direction: row;
@@ -85,7 +86,7 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
         
         /* background-color: #feffa8; */
         /* color: rgba(36, 36, 36,1); */
-        color: #fff;
+        color: #242424;
     }
     }
     
@@ -93,9 +94,10 @@ const posts =await Astro.glob('../../posts/*/*.mdx')
 <head>
     <ViewTransitions/>
 </head>
-<main  >
+<main >
+    <div class="bg"></div>
     <Navbar data ={posts}/>
-    <div style="display: flex;justify-content:center;"  transition:animate="fade" >
+    <div  style="display: flex;justify-content:center;"  transition:animate="fade" >
     <div class="searchBar" ><SearchBar data ={posts} client:only="react" transition:animate="fade"/></div></div>
 
 

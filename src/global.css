@@ -42,12 +42,12 @@
   font-optical-sizing: auto;
   /* font-variation-settings: 'wght' 400, 'wdth' 100; */
   line-height: 1.5;
-  font-weight:200;
+  font-weight:300;
   font-size:medium;
   font-style: normal;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #222831;
+  background-color: #EEEEEE;
   font-synthesis: none;
    text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -60,6 +60,16 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
     user-select: none;
+}
+.bg{
+    /* background-image: url("../../content/bg.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.2;
 }
 .blogPage p{
     font-size: 40px;
@@ -81,7 +91,7 @@ button{
     width: 40%;
     border-radius: 20px;
 
-    background-color:#5395f2 ;
+    background-color:#76ABAE ;
 }
 
 
@@ -96,11 +106,11 @@ button{
 }
 .toc a{
     text-decoration: none;
-    color:#5395f2;
+    color:#0C359E;
     font-size: larger;
 }
 .toc a:hover{
-    color:#feffa8;
+    color:#76ABAE;
 }
 
 .mainForm{
@@ -120,6 +130,11 @@ input{
     height:50px;
     font-size: 30px;
     padding:10px;
+    outline: none;
+    border: none;
+    background-color: #31363F;
+    box-shadow:  rgba(31, 29, 29, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+
 }
 input::placeholder{
     padding:10px;
@@ -132,12 +147,27 @@ textarea::placeholder{
 textarea{
     font-size: 30px;
     padding:10px;
+    border: none;
+    background-color: #31363F;
+    box-shadow:  rgba(31, 29, 29, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+
 }
 }
 
 @media only screen and (min-width:1000px){
     body{
         margin:0;
+    }
+    .bg{
+        /* background-image: url("./content/bg.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        /* background-position: 0; */
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.3;
     }
     .search{
         width: 100%;
@@ -149,10 +179,10 @@ textarea{
     }
 .toc a{
     text-decoration: none;
-    color:#5395f2;
+    color:#0C359E;
 }
 .toc a:hover{
-    color:#feffa8;
+    color:#76ABAE;
 }
     .blogPage p{
         text-align:justify ;
@@ -165,12 +195,12 @@ textarea{
    .form{
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     
    }
    .mainForm{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     width:30vw;
 }
@@ -183,7 +213,11 @@ input{
     display: flex;
     align-items: center;
     height:20px;
-    
+    outline: none;
+    border: none;
+    background-color: #31363F;
+    box-shadow:  rgba(31, 29, 29, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+
     padding:10px;
 }
 input::placeholder{
@@ -194,6 +228,14 @@ textarea::placeholder{
 }
 textarea{
     padding:10px;
+    border: none;
+    background-color: #31363F;
+    box-shadow:  rgba(31, 29, 29, 0.8) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+
+}
+textarea:focus{
+border: none;
+outline: none;
 }
     button{
         width:150px;
@@ -201,11 +243,11 @@ textarea{
         border-radius: 10px;
         border:none;
         margin-left: 10px;
-        background-color:#5395f2 ;
+        background-color:#76ABAE ;
 
     }
     button:active{
-        background-color:#5395f2d2 ;
+        background-color:#76ABAEd2 ;
 
 
     }
