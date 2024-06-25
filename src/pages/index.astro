@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Navbar from '../components/Navbar.astro'
 import '../global.css'
+import test from "../content/video/test.mp4"
 import '../components/Loading.astro'
 import { ViewTransitions } from 'astro:transitions';
 import Loading from '../components/Loading.astro';
@@ -93,9 +94,8 @@ import Loading from '../components/Loading.astro';
 }
 
 .inner-text {
-  position: relative;
+  /* position: relative; */
   /* top: 50%;c */
-  height: 100px;
   
   transform: translateY(-50%);
   @media only screen and (min-width: 320px) {
@@ -133,12 +133,12 @@ import Loading from '../components/Loading.astro';
   display: inline-block;
   font-size: .5em;
   font-weight: 100;
-  marign: 0;
+  margin: 0;
   line-height: 1;
   color: #ffffff;
   @media only screen and (max-width: 465px) {
     position: relative;
-    top: 0.6em;
+    /* top: 0.6em; */
   }
 }
 
@@ -191,8 +191,11 @@ color: #31363f;
 	display: flex;
 	justify-content: center;
   padding:10px; /* Text color */
- 	
-text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.467);
+ 	margin: 0%;
+/* text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.467); */
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
   color: #76ABAE;
   font-size: 50px;
   font-style: italic;
@@ -221,7 +224,7 @@ text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.467);
 				
 				<section class="hero">
 					<video class="hero-video" autoplay muted loop>
-					  <source src="./src/content/video/test.mp4" type="video/mp4">
+					  <source src={test} type="video/mp4">
 					  Your browser does not support the video tag.
 					</video>
 					
@@ -330,37 +333,16 @@ console.log('loaded')
 
       type();
 
-      const heroDown = document.querySelector('.hero-down');
-      heroDown.addEventListener('mousedown', () => {
-        const btnReact = document.querySelector('.btn-react');
-        btnReact.style.opacity = '0.25';
-        btnReact.style.transform = 'scale(1)';
-        setTimeout(() => {
-          btnReact.style.opacity = '0';
-          btnReact.style.transform = 'scale(0)';
-        }, 250);
-      });
-
-      const smoothScrollLinks = document.querySelectorAll('a[href*="#"]:not([href="#"])');
-      smoothScrollLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-          if (
-            location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
-            location.hostname === this.hostname
-          ) {
-            const target = document.querySelector(this.hash) || document.querySelector(`[name=${this.hash.slice(1)}]`);
-            if (target) {
-              event.preventDefault();
-              target.scrollIntoView({
-                behavior: 'smooth'
-              });
-
-			  
+	setTimeout(() => {
+            const container = document.querySelector('.container');
+            if (container) {
+                container.style.display = "none";
+            } else {
+                console.error('Element with class .container not found.');
             }
-			
-          }
-        });
-      });
+        }, 300);
+	
+    // 
     });
 	  </script>
 	  

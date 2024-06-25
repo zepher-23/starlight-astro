@@ -45,23 +45,23 @@ h1{
 @keyframes ring {
     0%{
         transform: rotate(0deg);
-        box-shadow: 0px 5px 5px #ff2121;
+        box-shadow: 0px 5px 5px #ff5b5b;
     }
     25%{
         transform: rotate(90deg);
-        box-shadow: 0px 5px 5px #fffb21;
+        box-shadow: 0px 5px 5px #fffc66;
     }
     50%{
         transform: rotate(180deg);
-        box-shadow: 0px 5px 5px #21c0ff;
+        box-shadow: 0px 5px 5px #75d8ff;
     }
     75% {
         transform: rotate(270deg);
-        box-shadow: 0px 5px 5px #bc21ff;
+        box-shadow: 0px 5px 5px #d46fff;
     }
     100% {
         transform: rotate(360deg);
-        box-shadow: 0px 5px 5px #ff2121;
+        box-shadow: 0px 5px 5px #ff5b5b;
     }
 }
 
@@ -71,3 +71,16 @@ h1{
         <h1>Loading...</h1>
     </div>
 </div>
+
+<script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        setTimeout(() => {
+            const container = document.querySelector('.container');
+            if (container) {
+                container.style.display = "none";
+            } else {
+                console.error('Element with class .container not found.');
+            }
+        }, 300);
+    });
+</script>
