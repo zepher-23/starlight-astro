@@ -80,7 +80,7 @@ import '../global.css'
         flex-direction: row;
         width: 100vw;
         height: 90px;
-        background-color: #31363fef;
+        background-color: #31363f;
         padding-right: 100px;
         padding-left: 100px;
         justify-content: center;
@@ -131,7 +131,7 @@ import '../global.css'
 <div style="display:flex;max-width: 100vw;position:fixed;top:0;z-index: 999;" >
 <main class="navbar">
    <h2 style="flex-grow: 1;font-weight: 800;
-    font-style: italic;align-items: center;display:flex"><a href="/">STARLIGHT CINEMATICS</a> </h2>
+    font-style: italic;align-items: center;display:flex"><a href="/" id="homeLink">STARLIGHT CINEMATICS</a> </h2>
 
 <div class="options">
    <a href="/blog"><h4>Posts</h4></a>
@@ -147,3 +147,22 @@ import '../global.css'
  </div>
 
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        const homeLink = document.getElementById('homeLink');
+
+function reloadPage(event) {
+  event.preventDefault(); // Prevent the default link behavior
+//   console.log('reload initiated');
+//   document.getElementById('loadingScreen').classList.remove('hidden');
+//   document.querySelector('.main-content').classList.remove('visible');
+
+  setTimeout(() => {
+    window.location.href = '/';
+  }, 300); // Small delay to show the loading screen
+}
+homeLink.addEventListener('click', reloadPage);
+
+    })
+    
+</script>
