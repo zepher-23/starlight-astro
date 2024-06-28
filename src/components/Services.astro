@@ -3,8 +3,10 @@ import '../global.css';
 const tabs = [
   { name: 'Cinematic', content: 'Capturing dynamic aerial shots for movies, TV shows, commercials, and music videos.' },
   { name: 'RealEstate', content: 'Providing immersive virtual tours and showcasing properties with stunning aerial views.' },
-  { name: 'Events', content: 'Recording weddings, corporate events, sports events, and more from unique perspectives.' },
+  { name: 'SpecialEvents', content: 'Recording weddings, corporate events, sports events, and more from unique perspectives.' },
+  { name: 'Inspections', content: 'Conducting detailed inspections of infrastructure, buildings, and agricultural fields.' },
   { name: 'Inspections', content: 'Conducting detailed inspections of infrastructure, buildings, and agricultural fields.' }
+
 ];
 ---
 
@@ -27,7 +29,7 @@ const tabs = [
       background-color: #31363f;
       color: #ddd;
 
-width:25%;
+width:50%;
       border: none;
       outline: none;
       cursor: pointer;
@@ -54,9 +56,12 @@ width:25%;
     }
     .tabcontent.active {
       display: block;
+      
     }
 }
 @media only screen and (min-width:1000px){
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
     .tab {
       overflow: hidden;
@@ -76,8 +81,8 @@ width:25%;
       padding: 14px 16px;
       transition: 0.3s;
       font-size: 17px;
-      font-style: normal;
-      font-weight: 200;
+      /* font-style: normal; */
+      font-weight: 100;
     }
     .tab button:hover {
       background-color: #ddd;
@@ -96,6 +101,10 @@ width:25%;
       display: block;
     }
   }
+  .tablinks{
+    font-weight: 100;
+  }
+  
   </style>
 <main style="z-index: 1;">
   <!-- <h2>Our Services</h2> -->
@@ -116,31 +125,32 @@ width:25%;
     </div>
   ))}
 
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      function openTab(tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].classList.remove('active');
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].classList.remove('active');
-        }
-        document.getElementById(tabName).classList.add('active');
-        document.querySelector(`button[data-tab="${tabName}"]`).classList.add('active');
-      }
-
-      // Set default active tab
-      openTab('Cinematic');
-
-      document.querySelectorAll('.tab button').forEach(button => {
-        button.addEventListener('click', function () {
-          openTab(this.getAttribute('data-tab'));
-        });
-      });
-    });
-  </script>
+ 
 </main>
 
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    function openTab(tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove('active');
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove('active');
+      }
+      document.getElementById(tabName).classList.add('active');
+      document.querySelector(`button[data-tab="${tabName}"]`).classList.add('active');
+    }
+
+    // Set default active tab
+    openTab('Cinematic');
+
+    document.querySelectorAll('.tab button').forEach(button => {
+      button.addEventListener('click', function () {
+        openTab(this.getAttribute('data-tab'));
+      });
+    });
+  });
+</script>
