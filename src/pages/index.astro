@@ -2,12 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Navbar from '../components/Navbar.astro'
-import '../global.css'
+import '../global.css';
+import {Image} from 'astro:assets'
+
 import test from "../content/video/test.mp4"
 import '../components/Loading.astro'
 import { ViewTransitions } from 'astro:transitions';
 import Loading from '../components/Loading.astro';
-
+import Footer from '../components/Footer.astro';
+import sl from "../content/sl.png";
+import Services from '../components/Services.astro'
 ---
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -19,15 +23,27 @@ import Loading from '../components/Loading.astro';
 
 .hidden {
   display: none;
-}.section{
-		/* width: 100vw; */
+}
+.section{
 		display:flex;
+    flex-direction: column;
 		height: 100vh;
 		margin:0;
-		padding:50px;
+    /* width: 100vw; */
+		padding:100px;
+    color: #31363f;
 		
 		/* background-color: antiquewhite; */
 	}
+  .section h1{
+        display: flex;
+        width: 100%;
+      }
+  .section.tabs{
+    display: flex;
+    flex-direction: column;
+
+  }
 	.home{
 		margin:0;
 		margin-top:0px;
@@ -166,7 +182,7 @@ import Loading from '../components/Loading.astro';
 	font-weight: 400;
 	font-style: italic;
 	display: flex;
-	width: 100vw;
+	/* width: 100vw; */
 justify-content: center;
 margin:0;
 height: 50px;
@@ -207,7 +223,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 
 }
 .btn-react {
-    background-color: #f5f5f5;
+    background-color: #76ABAE;
     width: 50%;
     opacity: 1;
     border-radius: 10px;
@@ -224,7 +240,9 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 @media only screen and (min-width:1000px){
 .hero-logo {
 	display: flex;
+  flex-direction: column;
 	justify-content: center;
+  align-items: center;
   padding:10px; /* Text color */
  	margin: 0%;
 /* text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.467); */
@@ -248,23 +266,122 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 
 }
 .btn-react {
-    background-color: #f5f5f5;
-    width: 120px;
+    background-color: #76ABAE;
+    /* width: 120px; */
     opacity: 1;
-    border-radius: 10px;
-    padding:5px;
+    border-radius: 5px;
+    padding:10px;
+    padding-right:20px;
+    padding-left: 20px;
     text-align: center;
-    
+    font-size: 20px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  
+  
   }
  .btn-react:hover {
   cursor: pointer;
  }
 }
+.mouse_wave {
+	display: block;
+	margin: 0 auto;
+	width: 24px;
+	height: 100px;
+	//background: blue;
+	margin-top: 15px;
+}
+.scroll_arrows
+{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+   
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 0 0 3px 4px;
+  
+  width: 16px;
+  height: 16px;
+}
+.one
+{
+  margin-top: 1px;
+}
+.one, .two, .three
+{
+    -webkit-animation: mouse-wave 1s infinite;
+    -moz-animation: mouse-wave 1s infinite;
+}
+.one
+{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+}
+
+.two
+{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.three
+{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
 
 
+@-webkit-keyframes mouse-wave {
+
+  0%   { opacity: 0;}
+  50%  { opacity: .5;}
+  100% { opacity: 1;}
+}
+@-moz-keyframes mouse-wave {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes mouse-wave {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@keyframes mouse-wave {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
 </style>
 <head>
 	<ViewTransitions/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
 	<div id="loadingScreen" class="loading-screen">
@@ -290,7 +407,10 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 					<div class="hero-content">
 					  <h1 class="hero-heading">
 						<section class="hero-text">
-							<h1 class="hero-logo">STARLIGHT CINEMATICS</h1>
+							<h1 class="hero-logo">      STARLIGHT CINEMATICS 
+                 <!-- <Image src={sl} alt="Description of my image" style="width:100px;height:100px"/> -->
+              </h1>
+               
               <h3 class="hero-tag">Capturing the World from New Heights with</h3>
 						<div class="inner-text">
 						  <p class="p1">FPV</p>
@@ -298,9 +418,19 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
               
 						</div>
 						<div class="hero-down" >
-						  <div class="btn-react">click</div>
-						  
+						  <div class="btn-react">Learn More</div>
+						 
 						</div>
+             
+            <div class="mouse_wave">
+
+
+              <span class="scroll_arrows one"></span>
+              <span class="scroll_arrows two"></span>
+              <span class="scroll_arrows three"></span>
+        
+        </div>
+            
 					  </section></h1>
 					</div>
 				  </section>
@@ -308,6 +438,8 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 			<div class="section"> 
 				
 				<h1>SERVICES</h1>
+        <!-- <Image src={sl} alt="Description of my image" style="width:200px;height:200px"/> -->
+<Services/>
 				
 			</div>
 			<div class="section">
@@ -336,7 +468,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 				
 			</div>
 		</div>
-		
+		<Footer/>
 	</main>
 </body>
 	<script>
