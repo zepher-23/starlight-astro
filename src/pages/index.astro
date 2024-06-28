@@ -24,17 +24,7 @@ import Services from '../components/Services.astro'
 .hidden {
   display: none;
 }
-.section{
-		display:flex;
-    flex-direction: column;
-		height: 100vh;
-		margin:0;
-    /* width: 100vw; */
-		padding:100px;
-    color: #31363f;
-		
-		/* background-color: antiquewhite; */
-	}
+
   .section h1{
         display: flex;
         width: 100%;
@@ -235,9 +225,31 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
  .btn-react:hover {
   cursor: pointer;
  }
+ .section{
+		display:flex;
+    flex-direction: column;
+		height: 100vh;
+		margin:0;
+    /* width: 100vw; */
+		padding:30px;
+    color: #31363f;
+		
+		/* background-color: antiquewhite; */
+	}
 
 }
 @media only screen and (min-width:1000px){
+  .section{
+		display:flex;
+    flex-direction: column;
+		height: 100vh;
+		margin:0;
+    /* width: 100vw; */
+		padding:100px;
+    color: #31363f;
+		
+		/* background-color: antiquewhite; */
+	}
 .hero-logo {
 	display: flex;
   flex-direction: column;
@@ -384,7 +396,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-	<div id="loadingScreen" class="loading-screen">
+	<div id="loadingScreen" class = "loading-screen" style="position: fixed;width:100vw;height:100vh;overflow:hidden; background-color: #000; z-index: 1000;">
 		<Loading />
 	  </div>
 
@@ -439,7 +451,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 				
 				<h1>SERVICES</h1>
         <!-- <Image src={sl} alt="Description of my image" style="width:200px;height:200px"/> -->
-<Services/>
+<Services />
 				
 			</div>
 			<div class="section">
@@ -472,7 +484,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 	</main>
 </body>
 	<script>
-		console.log('script loaded')
+
 		document.addEventListener('scroll', () => {
 		  const navbar = document.querySelector('.navbarmain');
 		  if (window.scrollY > 400) {
