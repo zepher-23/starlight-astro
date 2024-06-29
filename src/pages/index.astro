@@ -12,6 +12,7 @@ import Loading from '../components/Loading.astro';
 import Footer from '../components/Footer.astro';
 import sl from "../content/sl.png";
 import Services from '../components/Services.astro'
+import Portfolio from '../components/Portfolio.astro';
 ---
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -262,7 +263,7 @@ color: #31363f;
 	font-style: italic;
 	display: flex;
 	/* width: 100vw; */
-justify-content: center;
+justify-content: left;
 margin:0;
 height: 40px;
 color: #31363f;
@@ -473,7 +474,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 			</div>
 			<div class="section"> 
 				
-				<h1>WHAT WE OFFER!</h1>
+				<h1>WHAT WE OFFER !</h1>
         <!-- <Image src={sl} alt="Description of my image" style="width:200px;height:200px"/> -->
 <Services />
 				
@@ -481,6 +482,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 			<div class="section">
 				
 				<h1>portfolio </h1>
+        <Portfolio />
 				
 			</div>
 			<div class="section">

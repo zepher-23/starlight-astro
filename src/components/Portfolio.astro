@@ -1,0 +1,39 @@
+---
+import '../global.css'
+---
+
+<head>
+
+</head>
+<style>
+    .polygon-heading {
+    position: relative;
+    font-size: 2em;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .polygon-heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    clip-path: polygon(0% 0%, 40% 0%, 30% 100%, 0% 100%);
+    z-index: -1;
+  }
+</style>
+
+<main>
+    <h1 class="polygon-heading">Polygon Background Heading</h1>
+
+
+</main>
+<script>
+
+
+</script>

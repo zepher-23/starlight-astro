@@ -21,7 +21,7 @@ export default async function(req,context) {
       method: "POST",
       body: JSON.stringify({
         from: requestBody.sender,
-        to: requestBody.email,
+        to: "30zepher@gmail.com",
         subject: "Welcome",
         parameters: {
           name: requestBody.name, 
