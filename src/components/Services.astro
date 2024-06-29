@@ -67,6 +67,8 @@ width:50%;
     }
     div.content{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
   }
@@ -81,6 +83,25 @@ width:50%;
   }
   p.text{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+  }
+  p.text button{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+width:auto;
+padding:30px;
+margin:0px;
+margin-top:20px;
+border-radius: 5px;
+font-size:1.5em;
+
+
+cursor:pointer;
+font-style: italic;
+
+font-weight: 200; 
   }
 }
 @media only screen and (min-width:1000px){
@@ -144,6 +165,21 @@ width: auto;
     display: none;
   }
 
+  p.text button{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+width:auto;
+padding:15px;
+margin:0px;
+margin-top:20px;
+border-radius: 5px;
+font-size:1em;
+
+cursor:pointer;
+font-style: italic;
+
+font-weight: 200; 
+ }
+
   }
   .tablinks{
     font-weight: 100;
@@ -170,9 +206,7 @@ width: auto;
       <div class="content">
         <div class="img-mob"></div>
       <p class="text">{tab.content} <br> 
-      <button style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-width:auto;padding:15px;margin:0px;margin-top:20px;border-radius: 5px;
-font-size:1em;cursor:pointer;font-style: italic;font-weight: 200;">CONTACT US NOW !</button>
+      <button>CONTACT US NOW !</button>
 </p>
       <div class="img">
 
