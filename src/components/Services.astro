@@ -83,14 +83,14 @@ width:50%;
   }
   p.text{
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     text-align: justify;
   }
   p.text button{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-width:auto;
+width:100%;
 padding:30px;
 margin:0px;
 margin-top:20px;
@@ -102,6 +102,11 @@ cursor:pointer;
 font-style: italic;
 
 font-weight: 200; 
+  }
+  p.text button:active{
+    box-shadow: rgba(0, 0, 0, 0.268) 0px 3px 3px 0px;
+    background-color: #31363f;
+    color: #ddd;
   }
 }
 @media only screen and (min-width:1000px){
@@ -178,8 +183,16 @@ cursor:pointer;
 font-style: italic;
 
 font-weight: 200; 
+transition: 0.1s ease-in;
  }
-
+ p.text button:hover{
+  box-shadow: rgba(0, 0, 0, 0.293) 0px 3px 3px 0px;
+  background-color: #31363f;
+  color: #ddd;
+ }
+ p.text button:active{
+  box-shadow: rgba(0, 0, 0, 0.526)0px 3px 3px 0px ;
+ }
   }
   .tablinks{
     font-weight: 100;
